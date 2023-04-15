@@ -1,0 +1,61 @@
+<!DOCTYPE>
+<html lang="pt-br">
+<head>
+	
+	<title>Estatística</title>
+  <meta charset="utf-8">
+
+</head>
+<body>
+
+	<div class="container">
+		 <div class="row">
+    <div class="col s4">
+       <canvas class="radar-chart">	
+		</canvas>
+    </div>
+    <div class="col s4">
+      <canvas class="line-chart">	
+		</canvas>
+    </div>
+    <div class="col s4">
+     <canvas class="bar-chart">	
+		</canvas>
+    </div>
+  </div>
+</div>
+       
+     
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+<script>
+var ctx = document.getElementsByClassName("radar-chart");
+      
+     var chartGraph = new Chart(ctx,{
+     type: 'radar',
+     
+     data: {
+       labels: ["Kai'sa", "Ezreal", "Yuumi", "lee sin", "lux", "Yasuo", "Riven", "Pyke", "Nami", "vayne",
+       "Sivir", "Ahri", "Talor"],
+       datasets: [{
+         label: "CAMPEÕES MAIS USADOS ",
+         data: [5,10,6,13,14,17,27,7,14,6,12,15,16],
+         borderWidth: 6,
+         borderColor: 'rgba(77,173,253,0.85)',
+        backgroundColor: 'transparent',
+       },
+       {label: "CAMPEÕES MENOS USADOS ",
+         data: [9,7,6,13,24,21,17,7,14,6,16,17,12],
+         borderWidth: 6,
+         borderColor: 'rgba(6,204,6,0.85)',
+        backgroundColor: 'transparent',
+       }
+        ]
+     }
+     });
+     
+
+</script>
+</body>
+
+</html>
